@@ -32,8 +32,14 @@ The following processes were executed on the Windows endpoint:
 ```cmd
 notepad.exe
 calc.exe
+whoami
 ```
+**Notepad.exe OR Calc.exe**
 <img width="1996" height="439" alt="image" src="https://github.com/user-attachments/assets/2b18a389-f1f6-4ad6-879d-d2f7ec304768" />
+
+**Whoami**
+
+<img width="716" height="177" alt="image" src="https://github.com/user-attachments/assets/65fb20ad-453c-4087-8458-61619c7093bb" />
 
 
 ### Splunk Investigation
@@ -51,8 +57,7 @@ The executed processes were successfully identified within Splunk, confirming th
 
 ### MITRE ATT&CK
 
-- T1059.001 – PowerShell
-- T1059.003 – Windows Command Shell
+- T1059.003 Windows Command Shell
 
 ### Use Case 2: Network Connection Monitoring
 
