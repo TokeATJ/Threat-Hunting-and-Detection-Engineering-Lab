@@ -63,6 +63,10 @@ The executed processes were successfully identified within Splunk, confirming th
 
 ### Use Case 2: Network Connection Monitoring
 
+### Objective
+
+Validate that Sysmon captures network connections initiated by processes on the Windows endpoint and forwards that telemetry to Splunk.
+
 ### Use Case 3: DNS Query Monitoring
 
 ### Use Case 4: PowerShell Execution Detection
