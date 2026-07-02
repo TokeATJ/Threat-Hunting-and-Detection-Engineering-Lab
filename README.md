@@ -3,7 +3,7 @@
 
 ## Overview
 
-This project demonstrates the design, deployment, and operation of a SOC Home Lab used to simulate attacker activity, collect endpoint telemetry, and perform threat hunting investigations using Splunk and Sysmon.
+This project demonstrates the design, deployment, and operation of a SOC Home Lab used to simulate attacker activity, collect endpoint telemetry, and perform threat hunting investigations using Splunk and Sysmon. 
 
 The lab environment consists of:
 
@@ -14,6 +14,7 @@ The lab environment consists of:
 The objective of this project was to gain hands-on experience with SIEM operations, endpoint telemetry collection, threat hunting workflows, detection engineering concepts, and MITRE ATT&CK mapping.
 
 ## Skills Demonstrated
+Developed and investigated eight ATT&CK-aligned threat hunting use cases, including process creation monitoring, network service discovery detection, DNS query monitoring, PowerShell abuse detection, encoded PowerShell detection, LOLBIN abuse using certutil.exe, credential access discovery, and account/system discovery to simulate adversary behavior, validate endpoint telemetry, and develop threat detection workflows using Splunk, Sysmon, Windows Event Logs, and Kali Linux.
 
 - Splunk Enterprise Administration
 - Sysmon Configuration & Monitoring
@@ -28,7 +29,7 @@ The objective of this project was to gain hands-on experience with SIEM operatio
 - Security Investigation Workflows
 ---
 
-## First, lets confirm our data sources**
+## First, lets confirm our data sources
 
 Verify we are connected to the correct logs through Splunk
 
