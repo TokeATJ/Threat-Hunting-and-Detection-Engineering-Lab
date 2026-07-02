@@ -46,7 +46,7 @@ whoami
 
 ```spl
 index=main source="WinEventLog:Microsoft-Windows-Sysmon/Operational"
-notepad.exe OR calc.exe 
+notepad.exe OR calc.exe OR whoami
 ```
 
 ### Results
