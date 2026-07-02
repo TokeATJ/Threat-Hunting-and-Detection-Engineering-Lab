@@ -25,7 +25,8 @@ The objective of this project was to gain hands-on experience with SIEM operatio
 - PowerShell Monitoring
 - MITRE ATT&CK Mapping
 - Security Investigation Workflows
--- 
+---
+
 **First, lets confirm Data Source**
 
 Verify we are connected to the correct logs through Splunk
