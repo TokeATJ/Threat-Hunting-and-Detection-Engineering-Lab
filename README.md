@@ -171,15 +171,12 @@ powershell -NoProfile -ExecutionPolicy Bypass -Command "whoami"
 index=main "NoProfile"
 ```
 **"Get-Process" Powershell Command**
+
 <img width="1776" height="785" alt="image" src="https://github.com/user-attachments/assets/29176528-9ff1-48c7-bfeb-e3474432b284" />
 
 **"whoami" Powershell Coammand**
 
-
-
-
-
-
+<img width="1671" height="500" alt="Screenshot 2026-07-02 105134" src="https://github.com/user-attachments/assets/443eefe5-1681-4eff-9b72-f2e3919290c4" />
 
 ### Findings
 
