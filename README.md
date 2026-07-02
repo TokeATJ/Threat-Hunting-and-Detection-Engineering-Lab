@@ -180,6 +180,7 @@ index=main "NoProfile"
 
 
 
+
 ### Findings
 
 PowerShell execution activity was successfully identified within Splunk using Sysmon telemetry. Command-line arguments and execution context were available for investigation.
