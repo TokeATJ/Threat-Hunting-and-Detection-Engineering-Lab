@@ -1,8 +1,33 @@
 # Detection-Engineering-Lab
 
-## Detection Engineering Lab
+## Overview
+
+This project demonstrates the design, deployment, and operation of a SOC Home Lab used to simulate attacker activity, collect endpoint telemetry, and perform threat hunting investigations using Splunk and Sysmon.
+
+The lab environment consists of:
+
+- **Ubuntu Server** hosting Splunk Enterprise
+- **Windows 10 Endpoint** configured with Sysmon and Splunk Universal Forwarder
+- **Kali Linux Attacker Machine** used to simulate adversary activity
+
+The objective of this project was to gain hands-on experience with SIEM operations, endpoint telemetry collection, threat hunting workflows, detection engineering concepts, and MITRE ATT&CK mapping.
+
+## Skills Demonstrated
+
+- Splunk Enterprise Administration
+- Sysmon Configuration & Monitoring
+- Splunk Universal Forwarder Deployment
+- Endpoint Telemetry Collection
+- Threat Hunting Methodology
+- Detection Engineering
+- Windows Event Log Analysis
+- Network Reconnaissance Detection
+- PowerShell Monitoring
+- MITRE ATT&CK Mapping
+- Security Investigation Workflows
 
 **Confirm Data Source**
+Verify we are connected to the correct logs
 
 ```spl
 index=main
