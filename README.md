@@ -150,4 +150,29 @@ DNS query activity was successfully identified within Splunk, demonstrating visi
 
 ### Use Case 4: PowerShell Execution Detection
 
+### Objective
+
+Detect PowerShell execution commonly used by attackers for post-exploitation activity.
+
 ### Use Case 5: Encoded PowerShell Detection
+
+### Objective
+
+Detect obfuscated PowerShell execution and encoded commands.
+
+### Use Case 6: LOLBIN Abuse (certutil.exe)
+
+### Objective
+
+ Detect abuse of trusted Windows binaries used to evade security controls.
+
+### Use Case 7: Credential Access Discovery
+
+### Objective 
+
+Detect attempts to enumerate or access stored credentials.
+
+### Use Case 8: Account & System Discovery
+
+### Objective
+Detect local account enumeration and system discovery activity.
