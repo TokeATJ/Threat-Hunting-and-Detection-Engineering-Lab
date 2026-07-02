@@ -273,11 +273,90 @@ Execution of `certutil.exe` was successfully identified within Splunk. Command-l
 
 ### Objective 
 
-Detect attempts to enumerate or access stored credentials.
+Detect attempts to enumerate stored credentials on a Windows endpoint and investigate the activity using Sysmon telemetry collected in Splunk.
+
+### Attack Simulation
+
+The Windows Credential Manager utility was executed to enumerate stored credentials.
+
+```cmd
+cmdkey /list
+```
+<img width="1749" height="429" alt="image" src="https://github.com/user-attachments/assets/a580964e-b320-482d-bfc9-dbba745665d2" />
 
 
+### Splunk Investigation
 
+```spl
+index=main "cmdkey"
+```
+<img width="917" height="379" alt="image" src="https://github.com/user-attachments/assets/0d0ba30a-edb8-4faa-bce1-b131e8af4623" />
+
+### Findings
+
+Execution of `cmdkey.exe` was successfully identified within Splunk. The activity demonstrated how credential enumeration attempts can be detected through Sysmon process creation telemetry.
+
+### MITRE ATT&CK
+
+- T1555 - Credentials from Password Stores
+  
 ### Use Case 8: Account & System Discovery
 
 ### Objective
-Detect local account enumeration and system discovery activity.
+
+Detect account enumeration, privileged group discovery, and network configuration discovery activity commonly performed by attackers during post-exploitation and internal reconnaissance.
+
+### Attack Simulation
+
+The following commands were executed:
+
+```cmd
+net user
+
+net localgroup administrators
+
+netstat -ano
+```
+
+**Net User**
+
+<img width="1754" height="296" alt="image" src="https://github.com/user-attachments/assets/bfb02d6b-d4c6-4eab-9b23-24b66297987f" />
+
+**Net LocalGroup Administrators**
+
+<img width="1597" height="160" alt="image" src="https://github.com/user-attachments/assets/ecfc21d7-aa0f-4413-9af3-511dd4308a62" />
+
+
+
+
+**Netsat -Ano**
+
+<img width="1847" height="581" alt="image" src="https://github.com/user-attachments/assets/adb8691f-7538-410c-85d3-74fa0119bd87" />
+
+
+### Splunk Investigation
+
+```spl
+index=main "net.exe" "user"
+```
+<img width="1447" height="329" alt="image" src="https://github.com/user-attachments/assets/eba9a441-73ae-4097-85ca-ffbc95eabbd7" />
+
+```spl
+index=main "localgroup administrators"
+```
+<img width="1779" height="772" alt="image" src="https://github.com/user-attachments/assets/0485ef27-d290-4579-889c-1059ca86e903" />
+
+```spl
+index=main "netstat"
+```
+<img width="1813" height="735" alt="image" src="https://github.com/user-attachments/assets/87c7589e-916f-4dd8-b697-bb827a7d12d3" />
+
+### MITRE ATT&CK
+
+- T1087.001 - Local Account Discovery
+- T1069.001 - Local Group Discovery
+- T1016 - System Network Configuration Discovery
+
+### Findings
+
+Account enumeration, local group discovery, and network discovery activity were successfully identified within Splunk through Sysmon process creation telemetry. The activity demonstrated visibility into common post-exploitation reconnaissance techniques used by adversaries.
