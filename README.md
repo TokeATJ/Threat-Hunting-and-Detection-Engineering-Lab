@@ -77,7 +77,7 @@ A Kali Linux VM was used to simulate an external attacker performing reconnaissa
 | Kali Linux | 10.0.2.15 | Attacker |
 | Windows 10 Endpoint | 10.0.2.4 | Target |
 
-### Attack Performed
+### Attack Stimulation
 
 The following Nmap service discovery scan was executed from the Kali Linux VM:
 
@@ -148,17 +148,55 @@ DNS query activity was successfully identified within Splunk, demonstrating visi
 
 - T1071.004 - Application Layer Protocol: DNS
 
-### Use Case 4: PowerShell Execution Detection
+## Use Case 4: PowerShell Abuse Detection
 
 ### Objective
 
-Detect PowerShell execution commonly used by attackers for post-exploitation activity.
+Detect and investigate PowerShell execution activity commonly leveraged by attackers for execution and post-exploitation activities.
+
+### Attack Simulation
+
+The following PowerShell command was executed:
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -Command "Get-Process"
+powershell -NoProfile -ExecutionPolicy Bypass -Command "whoami"
+```
+<img width="1802" height="890" alt="image" src="https://github.com/user-attachments/assets/03177dec-1a4a-4b7f-a2a2-e3bdb1bc0c59" />
+
+
+### Splunk Investigation
+
+```spl
+index=main "NoProfile"
+```
+**"Get-Process" Powershell Command**
+<img width="1776" height="785" alt="image" src="https://github.com/user-attachments/assets/29176528-9ff1-48c7-bfeb-e3474432b284" />
+
+**"whoami" Powershell Coammand**
+
+
+
+
+
+
+### Findings
+
+PowerShell execution activity was successfully identified within Splunk using Sysmon telemetry. Command-line arguments and execution context were available for investigation.
+
+### MITRE ATT&CK
+
+- T1059.001 - PowerShell
+- 
+---
 
 ### Use Case 5: Encoded PowerShell Detection
 
 ### Objective
 
 Detect obfuscated PowerShell execution and encoded commands.
+
+
 
 ### Use Case 6: LOLBIN Abuse (certutil.exe)
 
