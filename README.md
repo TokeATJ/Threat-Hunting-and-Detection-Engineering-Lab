@@ -193,16 +193,26 @@ PowerShell execution activity was successfully identified within Splunk using Sy
 
 Detect obfuscated PowerShell execution and encoded commands.
 
+### Attack Simulation
 
+The following encoded PowerShell command was executed:
 
-
+```powershell
+powershell -EncodedCommand SQBFAFgA
+```
 
 <img width="1238" height="495" alt="image" src="https://github.com/user-attachments/assets/488c1225-84fc-4a15-b64f-80e8d8cd432e" />
 
+### Splunk Investigation
 
+```spl
+index=main "EncodedCommand"
+```
+<img width="1792" height="700" alt="EndcodeCommand Splunk" src="https://github.com/user-attachments/assets/09af63bc-e5f6-4248-b332-dc2b295798c9" />
 
+### Findings
 
-
+Encoded PowerShell execution activity was successfully identified within Splunk. The command-line arguments contained indicators of obfuscation commonly associated with attacker tradecraft.
 
 ### MITRE ATT&CK
 - T1059.001 - PowerShell
