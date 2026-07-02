@@ -102,7 +102,8 @@ index=main "10.0.2.15"
 ```
 **Splunk**
 
-<img width="624" height="224" alt="image" src="https://github.com/user-attachments/assets/f4dadcfd-370b-4c85-ba2c-2698faffd4f9" />
+<img width="1888" height="822" alt="image" src="https://github.com/user-attachments/assets/088dadd1-b6dd-458d-95ac-6c2031ce8f6b" />
+
 
 ### Findings
 
