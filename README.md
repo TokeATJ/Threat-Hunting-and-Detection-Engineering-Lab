@@ -18,7 +18,7 @@ You should see log sources similar to the following:
 | WinEventLog:Microsoft-Windows-Sysmon/Operational | Sysmon Telemetry |
 
 <img width="1405" height="694" alt="image" src="https://github.com/user-attachments/assets/94584eef-1d62-4c83-99d7-dc7faee2b45e" />
-
+---
 ### Use Case 1: Process Creation Monitoring
 
 ### Objective
