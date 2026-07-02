@@ -1,4 +1,5 @@
-# Detection-Engineering-Lab
+<img width="1693" height="929" alt="image" src="https://github.com/user-attachments/assets/80bbf3a7-ac38-489f-a4f4-83fa22dd3ba7" />
+
 
 ## Overview
 
